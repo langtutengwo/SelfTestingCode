@@ -12,7 +12,7 @@ public class AppTest
 	void testQ_rsqurtNormalInput() {
 		float a = 16;
 		float expected = 0.25f;
-
+		// 1 / sqrt(16) == 0.25
 		float actual= FindInverseSquareRoot.q_rsqurt(a);
 		float epsilon = Math.abs(actual - expected);
 		boolean result = false;
@@ -24,6 +24,7 @@ public class AppTest
 
 	@Test
 	void testQ_rsqurtInputIsZeroOrNegative() {
+		// throw exception when input is zero or negative
 		Exception exception = assertThrows(ArithmeticException.class, () -> {
 			FindInverseSquareRoot.q_rsqurt(-1);
 		});
